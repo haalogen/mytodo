@@ -9,3 +9,7 @@ Todo web app using Bottle.py
 ``` bash
 python mytodo.py
 ```
+Open in browser:
+``` bash
+localhost:8081
+```
