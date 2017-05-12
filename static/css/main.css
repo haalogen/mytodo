@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.tasks {
+  width: 80%;
+  margin: 0 auto;
+}
+.task {
+  margin: 10px 0;
+  border: 1px solid black;
+}
+.task-priority {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 1px solid black;
+}
+.task-priority.priority-1 {
+  background-color: red;
+}
+.task-priority.priority-2 {
+  background-color: orange;
+}
+.task-priority.priority-3 {
+  background-color: gray;
+}
+.task-priority,
+.task-deadline,
+.task-text,
+.task-buttons {
+  display: inline-block;
+}

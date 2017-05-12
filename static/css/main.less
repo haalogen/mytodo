@@ -1,0 +1,45 @@
+@priority-high-color: red;
+@priority-normal-color: orange;
+@priority-low-color: gray;
+@border-black: 1px solid black;
+
+* {
+	box-sizing: border-box;
+}
+a {
+	display: block;
+}
+.hidden {
+	display: none;
+}
+.tasks {
+	width: 80%;
+	margin: 0 auto;
+}
+.task {
+	margin: 10px 0;
+	border: @border-black;
+}
+.task-priority {
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border: @border-black;
+
+	&.priority-1 {
+		background-color: @priority-high-color;
+	}
+	&.priority-2 {
+		background-color: @priority-normal-color;
+	}
+	&.priority-3 {
+		background-color: @priority-low-color;
+	}
+}
+
+.task-priority,
+.task-deadline,
+.task-text,
+.task-buttons {
+	display: inline-block;
+}
