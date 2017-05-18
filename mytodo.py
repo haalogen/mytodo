@@ -79,8 +79,8 @@ def edit_item(no):
 		conn = sqlite3.connect(DB_NAME)
 		c = conn.cursor()
 		c.execute("""UPDATE todo SET description = ?, priority = ?,
-			deadline = ? WHERE id LIKE ?""",
-							(edit, priority, deadline, no))
+			deadline = ? WHERE id LIKE ?
+			""", (edit, priority, deadline, no))
 		conn.commit()
 
 		redirect('/')
@@ -116,7 +116,8 @@ def complete_item(no):
 	# remove task from DB
 	conn = sqlite3.connect(DB_NAME)
 	c = conn.cursor()
-	c.execute("DELETE FROM todo WHERE id=?", (no,))
+	c.execute("""UPDATE todo SET status=? WHERE id=?
+	""", (Status.DONE.value, no))
 	conn.commit()
 
 	redirect('/')
